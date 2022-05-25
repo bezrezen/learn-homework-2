@@ -18,11 +18,13 @@ def main():
         {'name':'Ярослав','age':'41','job':'великий князь киевский'},
         {'name':'Златан','age':'18','job':'конокрад'}
     ]
-    i = 0
+
     with open(u'C:/Users/bezre/OneDrive/Desktop/myprojexts/pyschooltasks/day2/learn-homework-2/ppl.csv', 'w', newline='', encoding='utf-8') as file:
+        fieldnames = ['name','age','job']
         for item in list_dict:
-            csv.writer(file).writerow(list_dict[i].values())
-            i += 1
+            writer = csv.DictWriter(file, fieldnames = fieldnames )
+            writer.writerow(item)
+
 
 if __name__ == "__main__":
     main()

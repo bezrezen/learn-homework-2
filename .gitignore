@@ -121,3 +121,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# материалы задания
+referat.txt
+ppl.csv

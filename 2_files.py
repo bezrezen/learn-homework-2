@@ -14,15 +14,13 @@
 def main():
     list = []
     with open(u'C:/Users/bezre/OneDrive/Desktop/myprojexts/pyschooltasks/day2/learn-homework-2/referat.txt','r', encoding= 'utf-8' ) as source:
-        for sym in source:
-            list.append(sym)
-        source.close()
-    str = ' '.join(list)
-    print(len(str))
-    print(len(str.split(' ')))
+        for symbol in source:
+            list.append(symbol)
+    symbol_string = ' '.join(list)
+    print(len(symbol_string))
+    print(len(symbol_string.split(' ')))
     with open(u'C:/Users/bezre/OneDrive/Desktop/myprojexts/pyschooltasks/day2/learn-homework-2/referat2.txt','a', encoding= 'utf-8' ) as file_2:
-        file_2.write(str.replace('.','!'))
-    file_2.close()
+        file_2.write(symbol_string.replace('.','!'))
 
 if __name__ == "__main__":
     main()
